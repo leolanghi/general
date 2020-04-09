@@ -1,0 +1,87 @@
+<div vm-slider>
+    
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da cidade" width="513" height="342" title="Muro da cidade por Tarso Bessa">
+    </p>
+    
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Intro Cod3r" height="342">
+    </p>
+    <p class="circular">
+        <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Rio de Janeiro" height="342">
+    </p>
+    
+</div>
+
+
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" alt="Muro da cidade" width="513" height="342" title="Muro da cidade por Tarso Bessa">
+</p>
+
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Intro Cod3r" height="342">
+</p>
+<p class="circular">
+    <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Rio de Janeiro" height="342">
+</p>
+
+<p class="texto">
+    <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="avatar" height="50" align="left">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa vitae tortor condimentum lacinia quis vel eros. Ac tincidunt vitae semper quis. Urna nunc id cursus metus aliquam. Adipiscing diam donec adipiscing tristique risus. Sed vulputate mi sit amet. Pulvinar sapien et ligula ullamcorper malesuada proin libero. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Egestas dui id ornare arcu odio ut sem nulla. Sit amet dictum sit amet justo donec enim. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique. Nulla posuere sollicitudin aliquam ultrices sagittis. Imperdiet sed euismod nisi porta lorem. Sagittis eu volutpat odio facilisis. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Quis varius quam quisque id diam vel. Tortor dignissim convallis aenean et. Augue lacus viverra vitae congue eu consequat ac felis.
+</p>
+
+<p class="cidade"></p>
+
+<p>
+    <picture>
+        <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" media="(min-width: 600px)">
+            <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="logo">
+    </picture>
+</p>
+
+<style>
+    p {
+        position: absolute;
+        display: none;
+    }
+
+
+    .circular {
+        width: 513px;
+        background-color: #444;
+    }
+
+    .texto {
+        width: 400px;
+    }
+
+    .texto img {
+        margin-right: 10px;
+    }
+
+    .cidade {
+        width: 513px;
+        height: 342px;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+
+</style>
+
+<script>
+    function mover(elem, inicio, fim, passo, callback) {
+        const novoInicio = inicio - passo
+        if(novoInicio >= fim) {
+            elem.style.left = novoInicio + 'px'
+            setTimeout(() => mover(elem, novoInicio, fim, passo,callback), 7)
+        } else {
+            callback()
+        }
+
+    }
+    const p = document.querySelector('[vm-slider] > p')
+    p.style.display = 'block'
+    
+</script>
