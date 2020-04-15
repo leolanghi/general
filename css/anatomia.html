@@ -5,7 +5,32 @@
     <meta charset="UTF-8">
     <title>Anatomia CSS</title>
     <style>
-        /* ... */
+        .selector {
+            color: #222; /* Valores Numéricos */
+            font-size: 30px; /* valores Fixos */
+            text-align: center; /*Valores Pré definidos*/
+
+            /* Valores Multiplos */
+            border: solid 5px navy; /*short hand property - acesso ultra rápido*/
+            font-family: Helvetica, monospace; /* Tentativas... tenta a primeira, se não disponível tenta a segunda */
+
+            /*Funções */
+            width: calc(100% - 40px); /* Para cálculo de preenchimento da tela, por exemplo */
+            background-color: rgb(134, 153,189); /* Estabelecer a cor por bits */
+        }
+
+        /* Usando uma Pseudo-classe, coloco :nome */ 
+
+        .selector:hover {
+            background-color: orangered;
+        }
+
+        /* usando um Pseudo-Elemento, coloco ::nome  */
+
+        .selector::first-letter {
+            font-size: 60px;
+        }
+
     </style>
 </head>
 
