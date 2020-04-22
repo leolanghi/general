@@ -1,0 +1,9 @@
+.contentItem {
+    min-width:200px;
+    height: 75px;
+    font-size: 20px;
+    display: inline-block;
+    background-color: aquamarine;
+    margin: 10px;
+    text-align: center;
+}

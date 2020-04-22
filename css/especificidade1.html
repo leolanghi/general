@@ -6,6 +6,26 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+
+        .observacao {
+            background-color: #5F5;
+            border: dashed 5px;
+            padding: 20px!important;
+            font-size: 40px;
+        }
+        
+
+        p {
+            background-color: #aaaaaa;
+        }
+
+        p.observacao{
+            background-color: yellow;
+            padding: 2px;
+        }
+
+
+        /* Mesmo o P sendo processado por último, a classe é mais específica que o elemento e o  BG vai ficar verde */
     </style>
 </head>
 
