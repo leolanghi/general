@@ -5,7 +5,72 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div {
+            font-size: 30px;
+            padding: 15px;
+            border: solid 5px #222;
+        }
+
+        .static {      
+            top: 100px;
+            left: 100px;
+                /*como ele é estatico as variáveis top e left não são lidas */
+            background-color: steelblue;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 {
+            /* ele considera o elemento imediatamente anterior, por ser relativo */
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1 {
+            /* se portará absoluto em relação a página pois sua referencia é o html (raiz), passa por cima de outros elementos */
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-color: violet;
+        }
+
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .absolute2 {
+            /*se posiciona como absoluto ao elemento anterior, que é o relative2 nesse caso, porque relative2 tem position determinada*/
+            /* se eu comentar a position do relative2, ele será absoluto em relação ao portview */
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+
+        .sticky {
+            /*O Sticky rola até ficar preso no topo. Ele passa por cima do Fixed*/
+            position: -webkit-sticky; /* tem que colocar por causa do Safari, ele não lê a tag padrão de sticky */
+            position: sticky;
+            background-color: #777777;
+            top: 0px;
+
+        }
+
+        
     </style>
 </head>
 
